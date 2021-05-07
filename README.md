@@ -9,14 +9,14 @@ Initialized db using these commands
 	*flask db upgrade.
 	
 3. Created 3 tables using flask-sqlalchemy (with automatic increment if id's named
-•Products with the following fields: 
+-Products with the following fields: 
 *id, 
 *name, 
 *description.
-•Users with the following fields: 
+-Users with the following fields: 
 *id, 
 *name.
-•Reviews with the following fields: 
+-Reviews with the following fields: 
 *id, 
 *user_id (Foreign Key: Users Table), 
 *product_id (Foreign Key: Products Table),
