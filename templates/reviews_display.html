@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            #result {
+                font-size: 40px;
+                text-align: center;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <div class="container">
+            <form onsubmit = "window.location = s_option.value + '/'+ product_id.value; return false;" method="GET">
+                <select name="s_option" id="s_option" >
+                    <option value="review">Review</option>
+                    <option value="user">User</option>
+                    <option value="product">Product</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <div class="form-group">
+                  <label for="product_id">Enter ID</label>
+                  <input type="text" class="form-control" name="product_id" id="product_id"  placeholder="Please enter the respective ID">
+                </div>
+                <button type="submit" class="btn btn-primary">GET</button>
+              </form>
+        </div> 
+    </body>
+</html>
