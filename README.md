@@ -24,9 +24,11 @@ Initialized db using these commands
 -rating.
 
 4. Populated the Users table with 5 users using Postman:
- ![alt text](https://github.com/vidhubala-selvaraj/ISI_Project/blob/main/screenshots/4.png)
+![alt text](https://github.com/vidhubala-selvaraj/ISI_Project/blob/main/screenshots/4.png)
+
 
 5. Populated the Products table with the following using Postman:
+
 ![alt text](https://github.com/vidhubala-selvaraj/ISI_Project/blob/main/screenshots/5.png)
  
 6. Populated Reviews Table with the following in Postman:
