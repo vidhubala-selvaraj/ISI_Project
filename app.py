@@ -67,7 +67,7 @@ def handle_users():
         if request.is_json:
             data = request.get_json()
             for i in range(len(data)):
-                new_user = ProductsModel(name=data[i]['name'])
+                new_user = UsersModel(name=data[i]['name'])
                 db.session.add(new_user)
                 db.session.commit()
             return {"message": f"user {new_user.name} has been created successfully."}
@@ -171,13 +171,10 @@ def handle_products_p_id(product_id):
         return jsonify(d)
 
 # RETURNING REVIEWS
-# @company_bp.route('/<company_id>',methods=['POST'])
 @app.route('/review/<product_id>', methods=['POST', 'GET', 'PUT', 'DELETE'])                               
 def handle_reviews_p_id(product_id):   
 
     handle = ReviewsModel.query.filter_by(product_id=product_id).all()
-    # handle = ReviewsModel.query.get_or_404(product_id)
-    # handle = ReviewsModel.query(ReviewsModel.product_id)
 
     if request.method == 'GET':
 
@@ -204,7 +201,6 @@ def handle_reviews_p_id(product_id):
         temp = json.loads(request.data)
         check = ReviewsModel.query.filter_by(product_id = product_id, user_id = temp['user_id']).all()
         if (len(check) != 0):
-            # return 'Failure', 200
             return {"message": f"Failure"}
         new_reviews = ReviewsModel(user_id=temp['user_id'], product_id=product_id, review=temp['review'], rating=temp['rating'])
         db.session.add(new_reviews)     
@@ -242,7 +238,6 @@ def handle_reviews_p_id(product_id):
 
 @app.route("/addition")
 def add():
-    # return render_template('demo.html')
     return render_template('reviews_post.html', page = 'add')
 
 @app.route('/display')
