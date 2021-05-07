@@ -11,7 +11,7 @@ Please install the following libraries:
 1. Created server 'local' under the hostname 'localhost' in pgAdmin4.
 2. Created database named 'task' in pgAdmin4.
 Create a Flask-SQLAlchemy instance called “db”.
-Initialized db using these commands 
+Initialized db using these commands after running "python app.py" command to run flask.
 
 				*flask db init, 
 				*flask db migrate, 
