@@ -61,13 +61,13 @@ class ReviewsModel(db.Model):
 def welcome():
     return render_template('welcome.html')
 
-@app.route('/users', methods=['POST', 'GET'])
+@app.route('/user', methods=['POST', 'GET'])
 def handle_users():
     if request.method == 'POST':
         if request.is_json:
-            datas = request.get_json()
-            for data in datas["name"]:
-                new_user = UsersModel(name=data)
+            data = request.get_json()
+            for i in range(len(data)):
+                new_user = ProductsModel(name=data[i]['name'])
                 db.session.add(new_user)
                 db.session.commit()
             return {"message": f"user {new_user.name} has been created successfully."}
@@ -84,7 +84,7 @@ def handle_users():
 
         return {"count": len(results), "users": results}
 
-@app.route('/products', methods=['POST', 'GET'])
+@app.route('/product', methods=['POST', 'GET'])
 def handle_products():
     if request.method == 'POST':
         print(request)
@@ -109,7 +109,7 @@ def handle_products():
 
         return {"count": len(results), "products": results}
 
-@app.route('/rev', methods=['POST', 'GET'])
+@app.route('/review', methods=['POST', 'GET'])
 def handle_reviews():
     if request.method == 'POST':
         print(request)
