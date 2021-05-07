@@ -1,12 +1,13 @@
 # ISI_Project
 Home assignment for ISI
-1.Created server 'local' under the hostname 'localhost' in pgAdmin4.
-2.Created database named 'task' in pgAdmin4.
-•	Create a Flask-SQLAlchemy instance called “db”.
-•	Initialized db using these commands 
-	>>flask db init, 
-	>>flask db migrate, 
-	>>flask db upgrade.
+1. Created server 'local' under the hostname 'localhost' in pgAdmin4.
+2. Created database named 'task' in pgAdmin4.
+Create a Flask-SQLAlchemy instance called “db”.
+Initialized db using these commands 
+	*flask db init, 
+	*flask db migrate, 
+	*flask db upgrade.
+	
 3. Created 3 tables using flask-sqlalchemy (with automatic increment if id's named
 •Products with the following fields: 
 -id, 
@@ -21,6 +22,7 @@ Home assignment for ISI
 -product_id (Foreign Key: Products Table),
 -review, 
 -rating.
+
 4. Populated the Users table with 5 users using Postman:
  ![alt text](https://github.com/vidhubala-selvaraj/ISI_Project/blob/main/screenshots/4.png)
 
